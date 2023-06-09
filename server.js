@@ -8,5 +8,4 @@ app.use(express.static(path.join(__dirname,'build')));
 app.get('/',(req,res) => {
     res.send('build/index.html')
 });
-
 app.listen(port);
