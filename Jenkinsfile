@@ -7,12 +7,12 @@ pipeline{
                 sh "npm install"
             }
         }
-        stages("Build"){
+        stage("Build"){
             steps {
                 sh "npm run build"
             }
         }
-        stages("Deploy"){
+        stage("Deploy"){
             steps{
                 sh "rm -rf /usr/local/var/www/react-app/build"
                 sh "cp -R /Users/aakash/.jenkins/workspace/reactmay/build /usr/local/var/www/react-app/build"
